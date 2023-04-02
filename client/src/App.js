@@ -8,6 +8,7 @@ import Foster from './components/Foster';
 import Adopt from './components/Adopt';
 import HowToHelp from './components/HowToHelp';
 import DonorDashboard from './components/DonorDashboard';
+import Footer from './components/footer';
 
 const App = () => {
   return (
@@ -46,6 +47,7 @@ const App = () => {
           />
         </Switch>
       </div>
+      <Footer/>
     </Router>
   );
 };
