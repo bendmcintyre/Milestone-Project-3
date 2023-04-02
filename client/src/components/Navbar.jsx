@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import classes from '../styles/Navbar.module.scss';
 import {FaBars} from 'react-icons/fa';
+import logo from '../assets/SAFERescue-header_logo.png';
 
 const Navbar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -19,49 +20,60 @@ const Navbar = () => {
         <Link
           to="/"
           className={classes.navLink}>
-          <button className={classes.navButton}>
-            <p className={classes.navName}>HOME</p>
-          </button>
+          <img
+            src={logo}
+            alt="SAFERescue"
+            className={classes.logo}
+          />
         </Link>
-        <Link
-          to="/about"
-          className={classes.navLink}>
-          <button className={classes.navButton}>
-            <p className={classes.navName}>ABOUT US</p>
-          </button>
-        </Link>
-        <Link
-          to="/adopt"
-          className={classes.navLink}>
-          <button className={classes.navButton}>
-            <p className={classes.navName}>ADOPT</p>
-          </button>
-        </Link>
-        <Link
-          to="/foster"
-          className={classes.navLink}>
-          <button className={classes.navButton}>
-            <p className={classes.navName}>FOSTER</p>
-          </button>
-        </Link>
-        <Link
-          to="/howToHelp"
-          className={classes.navLink}>
-          <button className={classes.navButton}>
-            <p className={classes.navName}>HOW TO HELP</p>
-          </button>
-        </Link>
-        <Link
-          to="/contact"
-          className={classes.navLink}>
-          <button className={classes.navButton}>
-            <p className={classes.navName}>CONTACT</p>
-          </button>
-        </Link>
-        <div
-          className={classes.menuIcon}
-          onClick={toggleMobileNav}>
-          <FaBars />
+        <div className={classes.linksContainer}>
+          <Link
+            to="/"
+            className={classes.navLink}>
+            <button className={classes.navButton}>
+              <p className={classes.navName}>HOME</p>
+            </button>
+          </Link>
+          <Link
+            to="/about"
+            className={classes.navLink}>
+            <button className={classes.navButton}>
+              <p className={classes.navName}>ABOUT US</p>
+            </button>
+          </Link>
+          <Link
+            to="/adopt"
+            className={classes.navLink}>
+            <button className={classes.navButton}>
+              <p className={classes.navName}>ADOPT</p>
+            </button>
+          </Link>
+          <Link
+            to="/foster"
+            className={classes.navLink}>
+            <button className={classes.navButton}>
+              <p className={classes.navName}>FOSTER</p>
+            </button>
+          </Link>
+          <Link
+            to="/howToHelp"
+            className={classes.navLink}>
+            <button className={classes.navButton}>
+              <p className={classes.navName}>HOW TO HELP</p>
+            </button>
+          </Link>
+          <Link
+            to="/contact"
+            className={classes.navLink}>
+            <button className={classes.navButton}>
+              <p className={classes.navName}>CONTACT</p>
+            </button>
+          </Link>
+          <div
+            className={classes.menuIcon}
+            onClick={toggleMobileNav}>
+            <FaBars />
+          </div>
         </div>
       </div>
       <div
