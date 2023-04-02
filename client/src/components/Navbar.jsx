@@ -69,6 +69,13 @@ const Navbar = () => {
               <p className={classes.navName}>CONTACT</p>
             </button>
           </Link>
+          <Link
+            to="/donorDashboard"
+            className={classes.navLink}>
+            <button className={classes.navButton}>
+              <p className={classes.navName}>DONOR DASHBOARD</p>
+            </button>
+          </Link>
           <div
             className={classes.menuIcon}
             onClick={toggleMobileNav}>
