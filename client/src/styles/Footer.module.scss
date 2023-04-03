@@ -50,19 +50,65 @@
         .questions{
             color: $font-color-light;
             font-family: $heading-font-family;
-            font-size: 12px;
-            padding: 1em;;
+            font-size: 14px;
+            padding: 1em;
             margin-right: 1em;
 
+            .linksContainer{
+                display: flex;
+                flex-direction: column;
+                
+                .searchLink{
+                    text-decoration: none;
+                    font-size: 12px;
+                    color: $font-color-light;
+                    transition: .5s;
+                    // position:absolute;
+                    justify-content: space-around;
+                    
+                    &:hover{
+                        color: $contrast-background-color;
+                        transform: translate(1em, 0);
+                    }
+                }
+            }
+            
     
         }
         .email{
             color: $font-color-light;
             font-family: $heading-font-family;
-            font-size: 12px;
+            font-size: 14px;
+            width:20%;
             padding:1em;
             margin-left: 1em;
-            margin-right: 2em;
+            margin-right: 4em;
+
+            .emailInput{
+                height: 2em;
+                width: 100%;
+                margin-top: 1em;
+                padding: .5em;
+                padding-left: 1em;
+                color: $font-color-light;
+                transition: .8s;
+                border: 3px solid $font-color-light;
+                background-color: $footer-color;
+
+                &::placeholder{
+                    color: $font-color-light;
+                    font-family: $body-font-family;
+                }
+
+                &:focus{
+                    border: 3px solid $secondary-accent;
+                    outline: none;
+
+                    &::placeholder{
+                        color: transparent;
+                    }
+                }
+            }
         }
     }
 }

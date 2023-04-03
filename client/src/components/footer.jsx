@@ -37,7 +37,7 @@ const Footer = () => {
                 <div className={`${classes.email}`}>
                     SUBSCRIBE TO OUR MAILING LIST!
                     <div>
-                    <input type="email" className={`${classes.emailInput}`} placeholder="Enter your email:"/>
+                    <input type="email" className={`${classes.emailInput}`} placeholder="Enter your email"/>
                     </div>
                 </div>
             </div>
