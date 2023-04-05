@@ -1,1 +1,50 @@
 @import './_common.scss';
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logoContainer {
+  flex: 1;
+  max-width: 200px;
+}
+
+.logo {
+  width: 100%;
+  object-fit: contain;
+  margin-left: 1rem;
+}
+
+.textContainer {
+  flex: 2;
+  padding-left: 2rem;
+  font-family: 'Noto Sans', sans-serif;
+  color: rgb(37, 27, 15);
+  margin-right: 8rem;
+  text-align: justify;
+}
+
+.textContainerBold {
+  font-weight: Bold;
+}
+
+.aboutUsHeaders {
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .logoContainer {
+    min-width: 100%;
+  }
+
+  .textContainer {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+}
+

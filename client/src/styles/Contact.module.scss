@@ -1,1 +1,53 @@
 @import './_common.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Noto Sans', sans-serif;
+  color: rgb(37, 27, 15);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 600px;
+}
+
+.contactHeader1,
+.contactHeader2{
+  text-align: center;
+}
+
+.contactText {
+    text-align: justify;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-family: 'Noto Sans', sans-serif;
+  color: rgb(37, 27, 15);
+}
+
+label {
+  margin-bottom: 0.2rem;
+}
+
+button {
+  align-self: center;
+  padding: 0.5rem 1rem;
+  font-family: 'Noto Sans', sans-serif;
+  color: rgb(37, 27, 15);
+  background-color: #f1c40f;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #d4ac0d;
+  }
+}

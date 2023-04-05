@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import classes from '../styles/Navbar.module.scss';
 import {FaBars} from 'react-icons/fa';
-import logo from '../assets/SAFERescue-header_logo.png';
+import safeRescueHeaderLogo from '../assets/SAFERescue-header_logo.png';
 
 const Navbar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -24,7 +24,7 @@ const Navbar = () => {
             to="/"
             className={classes.navLink}>
             <img
-              src={logo}
+              src={safeRescueHeaderLogo}
               alt="SAFERescue"
               className={classes.logo}
             />
