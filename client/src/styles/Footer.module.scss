@@ -2,7 +2,7 @@
 
 .footer {
     background-color: $footer-color;
-    position: absolute;
+    position:relative;
     align-items: center;
     height: auto;
     width: 100%;
@@ -55,7 +55,6 @@
         font-family: $body-font-family;
         font-size: 12px;
         color: $font-color-light;
-        margin-bottom: 3em;
         padding: 2em;
         text-align: center;
     }
