@@ -2,7 +2,7 @@
 
 .footer {
     background-color: $footer-color;
-    position:relative;
+    position: relative;
     align-items: center;
     height: auto;
     width: 100%;
@@ -12,6 +12,7 @@
         margin-right: 2em;
         padding: 1em;
         max-width: 80%;
+        min-width: 300px;
 
         img {
             height: 100%;
@@ -53,10 +54,13 @@
 
     .copyright {
         font-family: $body-font-family;
-        font-size: 12px;
         color: $font-color-light;
         padding: 2em;
         text-align: center;
+    }
+
+    .copyrightText {
+        font-size: 12px;
     }
 
     .footerContainer {
@@ -66,11 +70,18 @@
         justify-content: space-between;
 
         .questions {
-            color: $font-color-light;
-            font-family: $heading-font-family;
-            font-size: 14px;
             padding: 1em;
             margin-right: 1em;
+            width: 20%;
+
+            h3{
+                font-size: 1em;
+                width: 80%;
+                font-family: $heading-font-family;
+                color: $font-color-light;
+                font-weight: 500;
+                white-space: nowrap;
+            }
 
             .linksContainer {
                 display: flex;
@@ -95,13 +106,22 @@
         }
 
         .email {
-            color: $font-color-light;
-            font-family: $heading-font-family;
-            font-size: 14px;
+            
+            // font-family: $heading-font-family;
+            // font-size: 14px;
             width: 20%;
             padding: 1em;
             margin-left: 1em;
             margin-right: 4em;
+
+            h3{
+                font-size: 1em;
+                font-family: $heading-font-family;
+                color: $font-color-light;
+                font-weight: 500;
+                max-width: 80%;
+                white-space: nowrap;
+            }
 
             .emailInput {
                 height: 2em;

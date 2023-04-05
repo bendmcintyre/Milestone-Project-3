@@ -34,7 +34,7 @@ const Footer = () => {
                     <img src={award} alt="Award" />
                 </div>
                 <div className={`${classes.questions}`}>
-                    LOOKING FOR SOMETHING?
+                    <h3>LOOKING FOR SOMETHING?</h3>
                     <div className={`${classes.linksContainer}`}>
                         <Link
                             to="/adopt"
@@ -54,14 +54,14 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={`${classes.email}`}>
-                    SUBSCRIBE TO OUR MAILING LIST!
+                    <h3>SUBSCRIBE TO OUR MAILING LIST!</h3>
                     <div>
                         <input type="email" className={`${classes.emailInput}`} placeholder="Enter your email" required />
                     </div>
                 </div>
             </div>
             <div className={`${classes.copyright}`}>
-                ©2019 SAFE Rescue Team - Founded on ♥ for animals ~ Run by caring volunteers
+                <p className={`${classes.copyrightText}`}>©2019 SAFE Rescue Team - Founded on ♥ for animals ~ Run by caring volunteers</p>
             </div>
         </footer>
     );

@@ -10,8 +10,10 @@
 
     .logo {
       max-width: 100%;
-      width: 350px;
-      margin-top: 5rem;
+      width: 100px;
+      margin-top: 4rem;
+      padding-top: 0.5rem;
+      padding-left: 1rem;
     }
 
     .linksContainer {
@@ -49,10 +51,14 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 85px;
+    height: 65px;
     background-color: #ffadad;
     z-index: 999;
   }
+}
+
+.navName {
+  padding-left: 1rem;
 }
 
 .navButton {
