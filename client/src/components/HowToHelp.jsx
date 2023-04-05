@@ -4,7 +4,6 @@ import Footer from './footer'
 
 const HowToHelp = () => {
   return (
- howToHelp
     <div class='pageContainer'>
       <div class='titleContainer'>
         <h1>How To Help</h1>
@@ -33,7 +32,6 @@ const HowToHelp = () => {
           </div>
 
     </div>
- main
   );
 };
 
