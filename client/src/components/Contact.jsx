@@ -37,7 +37,7 @@ const ContactForm = () => {
         <h2 className={classes.contactHeader2}>GET IN TOUCH</h2>
           <p className={classes.contactText}>
             This is our general contact form. Contact us if you have any other questions that you might have or if you are interested in volunteering. 
-            Otherwise, if you are interested in <a href="https://saferescueteam.org/adopt-a-pet/">adopting</a>
+            Otherwise, if you are interested in <a href="https://saferescueteam.org/adopt-a-pet/">adopting </a>
             or <a href="https://saferescueteam.org/become-a-foster/">fostering</a>, 
             please use the more in-depth form on the pages provided for each.
           </p>

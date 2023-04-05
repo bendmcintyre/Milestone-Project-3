@@ -70,6 +70,10 @@
   letter-spacing: -1px;
   margin-right: 10px;
   margin-top: 5rem;
+
+  &:hover {
+    color: $secondary-accent;
+  }
 }
 
 .mobileNav {

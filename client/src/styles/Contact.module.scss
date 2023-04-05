@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Noto Sans', sans-serif;
   color: $font-color-dark;
 }
 
@@ -23,10 +22,12 @@ form {
 .contactHeader1,
 .contactHeader2{
   text-align: center;
+  font-family: $heading-font-family;
 }
 
 .contactText {
     text-align: justify;
+    font-family: $body-font-family;
 }
 
 input,
@@ -34,7 +35,7 @@ textarea {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.5rem;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: $body-font-family;
   color: $font-color-dark;
 }
 
