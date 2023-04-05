@@ -61,7 +61,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className={`${classes.copyright}`}>
-                ©2019 SAFE Rescue Team - Founded on ♥ for animals ~ Run by caring volunteers
+                <p className={`${classes.copyrightText}`}>©2019 SAFE Rescue Team - Founded on ♥ for animals ~ Run by caring volunteers</p>
             </div>
         </footer>
     );
