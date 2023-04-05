@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+ 
+
+
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -20,6 +23,26 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <div>
+        <h1>REPORT A DOG</h1>
+        <h2>FOUND AN ANIMAL?</h2>
+        <p>  If you have found an injured, endangered or unleashed animal, please contact us with the following information.
+
+               • Location with cross streets if available
+               • Time you saw the animal
+               • Any details about the animal
+            If you’ve taken a picture, please upload it with the form.
+        </p>
+      </div>
+      <div>
+        <h2>GET IN TOUCH</h2>
+          <p>
+            This is our general contact form. Contact us if you have any other questions that you might have or if you are interested in volunteering. 
+            Otherwise, if you are interested in <a href="https://saferescueteam.org/adopt-a-pet/">adopting</a>
+            or <a href="https://saferescueteam.org/become-a-foster/">fostering</a>, 
+            please use the more in-depth form on the pages provided for each.
+          </p>
+      </div>
       <div>
         <label htmlFor="name">Your Name: *</label>
         <input
