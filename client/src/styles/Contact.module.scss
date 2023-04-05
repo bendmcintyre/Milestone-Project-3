@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   font-family: 'Noto Sans', sans-serif;
-  color: rgb(37, 27, 15);
+  color: $font-color-dark;
 }
 
 form {
@@ -13,6 +13,11 @@ form {
   flex-direction: column;
   width: 80%;
   max-width: 600px;
+}
+
+.contactHeader1 {
+    margin-top: 0;
+    font-size: 40px;
 }
 
 .contactHeader1,
@@ -30,7 +35,7 @@ textarea {
   margin-bottom: 1rem;
   padding: 0.5rem;
   font-family: 'Noto Sans', sans-serif;
-  color: rgb(37, 27, 15);
+  color: $font-color-dark;
 }
 
 label {
@@ -41,13 +46,14 @@ button {
   align-self: center;
   padding: 0.5rem 1rem;
   font-family: 'Noto Sans', sans-serif;
-  color: rgb(37, 27, 15);
-  background-color: #f1c40f;
+  color: $font-color-dark;
+  background-color: $primary-accent;
   border: none;
   cursor: pointer;
   transition: 0.3s;
+  font-size: 30px;
 
   &:hover {
-    background-color: #d4ac0d;
+    background-color: $secondary-accent;
   }
 }
