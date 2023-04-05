@@ -32,7 +32,6 @@ const HowToHelp = () => {
           </div>
 
     </div>
- main
   );
 };
 
