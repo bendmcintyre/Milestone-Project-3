@@ -1,68 +1,66 @@
 @import './_common.scss';
 
 .footer {
-    background-color: $footer-color;
-    position: absolute;
-    align-items: center;
-    height: auto;
-    width: 100%;
-    bottom: 0;
+  background-color: $footer-color;
+  position: absolute;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  bottom: 0;
 
-    .logo {
-        margin-right: 2em;
-        padding: 1em;
-        max-width: 80%;
+  .logo {
+    margin-right: 2em;
+    padding: 1em;
+    max-width: 80%;
 
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: contain;
-        }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
     }
+  }
 
-    .award {
-        margin-right: 2em;
-        padding-right: 2em;
-        max-width: 80%;
+  .award {
+    margin-right: 2em;
+    padding-right: 2em;
+    max-width: 80%;
 
-        img {
-            height: 200px;
-            width: 200px;
-            object-fit: contain;
-        }
+    img {
+      height: 200px;
+      width: 200px;
+      object-fit: contain;
     }
+  }
 
-    .copyright{
-        font-family: $body-font-family;
-        font-size: 12px;
-        color: $font-color-light;
-        margin-bottom: 3em;
-        padding: 2em;
-        text-align: center;
+  .copyright {
+    font-family: $body-font-family;
+    font-size: 12px;
+    color: $font-color-light;
+    margin-bottom: 3em;
+    padding: 2em;
+    text-align: center;
+  }
+
+  .footerContainer {
+    margin-top: 3em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .questions {
+      color: $font-color-light;
+      font-family: $heading-font-family;
+      font-size: 12px;
+      padding: 1em;
+      margin-right: 1em;
     }
-
-    .footerContainer {
-        margin-top: 3em;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-
-        .questions{
-            color: $font-color-light;
-            font-family: $heading-font-family;
-            font-size: 12px;
-            padding: 1em;;
-            margin-right: 1em;
-
-    
-        }
-        .email{
-            color: $font-color-light;
-            font-family: $heading-font-family;
-            font-size: 12px;
-            padding:1em;
-            margin-left: 1em;
-            margin-right: 2em;
-        }
+    .email {
+      color: $font-color-light;
+      font-family: $heading-font-family;
+      font-size: 12px;
+      padding: 1em;
+      margin-left: 1em;
+      margin-right: 2em;
     }
+  }
 }
