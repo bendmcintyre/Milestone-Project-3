@@ -7,7 +7,6 @@ import Navbar from './components/Navbar';
 import Foster from './components/Foster';
 import Adopt from './components/Adopt';
 import HowToHelp from './components/HowToHelp';
-import DonorDashboard from './components/DonorDashboard';
 import Footer from './components/Footer';
 
 const App = () => {
