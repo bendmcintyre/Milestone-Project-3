@@ -41,10 +41,6 @@ const App = () => {
             path="/contact"
             component={Contact}
           />
-          <Route
-            path="/donorDashboard"
-            component={DonorDashboard}
-          />
         </Switch>
       </div>
       <Footer/>
