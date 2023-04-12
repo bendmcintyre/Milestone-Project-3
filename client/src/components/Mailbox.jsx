@@ -1,4 +1,8 @@
 import React from 'react'; 
+import NoneSelected from './NoneSelected';
+import Email from './Email';
+import EmailList from './EmailList';
+
 
 var Mailbox = React.createClass({
     getInitialState: function () {

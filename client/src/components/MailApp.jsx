@@ -2,9 +2,7 @@ import React from 'react';
 import Mailbox from './Mailbox';
 import MailboxList from './MailboxList';
 import NoneSelected from './NoneSelected';
-import Email from './Email';
-import EmailList from './EmailList';
-import EmailListItem from './EmailListItem';
+
 
 
 var MailApp = React.createClass({
