@@ -1,0 +1,91 @@
+/* html,
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #f8f3eb;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+} */
+
+.swiper {
+    width: 100%;
+    height: 650px;
+    top: -60px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    background: #f8f3eb;
+
+    /* Center slide text vertically */
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.slide-button {
+    background-color: #ffadad;
+    height: 35px;
+    font-size: 18px;
+    padding: 0 1em;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    margin: 1em;
+
+    
+}
+
+.slide-container{
+    color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3); */
+}
+
+.title{
+    font: 600;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.dog-name{
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow: 5px 5px, 5px, black;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    /* background-color: white;
+    background-color: rgba(255, 255, 255, 0.5); */
+    right:10px;
+    padding: 30px;
+    color: #000 !important;
+    fill: black !important;
+    stroke: black !important;
+}
