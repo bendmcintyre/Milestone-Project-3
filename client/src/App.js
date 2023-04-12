@@ -8,6 +8,7 @@ import Foster from './components/Foster';
 import Adopt from './components/Adopt';
 import HowToHelp from './components/HowToHelp';
 import Footer from './components/Footer';
+import MailApp from './components/MailApp';
 
 const App = () => {
   return (
@@ -39,6 +40,10 @@ const App = () => {
           <Route
             path="/contact"
             component={Contact}
+          />
+          <Route
+            path="/MailApp"
+            component={MailApp}
           />
         </Switch>
       </div>

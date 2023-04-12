@@ -1,0 +1,1 @@
+React.render(<App mailboxes={fixtures} />, document.body)
