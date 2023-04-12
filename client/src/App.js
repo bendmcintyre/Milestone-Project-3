@@ -40,7 +40,6 @@ const App = () => {
             path="/contact"
             component={Contact}
           />
-    
         </Switch>
       </div>
       <Footer/>
