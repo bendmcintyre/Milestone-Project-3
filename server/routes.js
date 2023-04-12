@@ -1,10 +1,10 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-// should require auth file to make sure user is logged
-// prbably should add all api his from controller 
+const controller = require('./controller');
 
-
-//Routes
-//errors 
+router.get('/about', controller.about);
+router.get('/adopt', controller.adopt);
+router.get('/contact', controller.contact);
+router.get('/how-to-help', controller.howToHelp);
 
 module.exports = router;
