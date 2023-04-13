@@ -3,7 +3,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 //When controller is up and ready
-const routes = require('./controller')
+
+const routes = require('./routes')
 
 // Middleware for parsing JSON data
 app.use(express.json());
