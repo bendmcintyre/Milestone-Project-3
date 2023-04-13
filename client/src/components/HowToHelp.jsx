@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from '../styles/HowToHelp.module.scss';
 
-
 const HowToHelp = () => {
   return (
     <div className={classes.container}>

@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import classes from '../styles/Navbar.module.scss';
-import {FaBars} from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import safeRescueHeaderLogo from '../assets/SAFERescue-header_logo.png';
 
 const Navbar = () => {
@@ -20,9 +20,7 @@ const Navbar = () => {
         }`}>
         <div className={classes.navContainer}>
           <div className={classes.navTopBar}></div>
-          <Link
-            to="/"
-            className={classes.navLink}>
+          <Link to="/" className={classes.navLink}>
             <img
               src={safeRescueHeaderLogo}
               alt="SAFERescue"
@@ -73,14 +71,16 @@ const Navbar = () => {
               </button>
             </Link>
             <Link
-              to="/donorDashboard"
+              to="/MailApp"
               className={classes.navLink}>
               <button className={classes.navButton}>
-                <p className={classes.navName}>DONOR DASHBOARD</p>
+                <p className={classes.navName}>ADMIN LOGIN</p>
               </button>
             </Link>
             <div
-              className={classes.menuIcon}
+              className={`${classes.menuIcon} ${
+                showMobileNav ? classes.hideMenuIcon : ''
+              }`}
               onClick={toggleMobileNav}>
               <FaBars />
             </div>
@@ -89,7 +89,10 @@ const Navbar = () => {
         <div
           className={classes.overlay}
           onClick={toggleMobileNav}></div>
-        <div className={classes.mobileNav}>
+        <div
+          className={`${classes.mobileNav} ${
+            showMobileNav ? classes.showMobileNav : ''
+          }`}>
           <div className={classes.mobileNavMenu}>
             <Link
               to="/"
@@ -120,6 +123,11 @@ const Navbar = () => {
               to="/contact"
               className={classes.mobileNavLink}>
               <p className={classes.navName}>CONTACT</p>
+            </Link>
+            <Link
+              to="/MailApp"
+              className={classes.mobileNavLink}>
+              <p className={classes.navName}>ADMIN LOGIN</p>
             </Link>
           </div>
         </div>
