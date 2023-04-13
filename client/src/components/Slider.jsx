@@ -13,7 +13,7 @@ import image2 from "../assets/dog2.jpg"
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
-export default function App() {
+export default function Slider() {
     return (
         <>
             <Swiper
