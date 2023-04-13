@@ -52,3 +52,44 @@
     font-style:italic;
     font-size: 20px;
 }
+
+@media (max-width: 600px) {
+.contrastContainer {
+padding: 0.5em;
+box-shadow: none;
+}
+
+.missionContainer {
+display: block;
+margin-left: 1em;
+margin-top: 1em;
+}
+
+.dogImage {
+width: 100%;
+border-radius: 10px;
+}
+
+.missionText {
+margin: 1em;
+font-size: 18px;
+}
+
+.missionTextTitle {
+margin: 1em;
+font-size: 30px;
+}
+
+.quoteContainer {
+margin: 1em;
+padding: 0.5em;
+}
+
+.quote {
+font-size: 24px;
+}
+
+.author {
+font-size: 16px;
+}
+}

@@ -53,5 +53,14 @@
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
 
+  .container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 
+  .text {
+    text-align: center;
+  }
+}
