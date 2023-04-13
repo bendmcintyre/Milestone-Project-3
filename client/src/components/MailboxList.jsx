@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class MailboxList extends Component {
   render() {
-    const { mailboxes, onSelectMailbox } = this.props;
+    const { mailboxes = [], onSelectMailbox } = this.props;
     const mailbox_list = mailboxes.map((mailbox) => (
       <li
         className="list-group-item"
