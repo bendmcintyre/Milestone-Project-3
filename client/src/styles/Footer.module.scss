@@ -150,4 +150,59 @@
             }
         }
     }
+
+    @media (max-width: 768px) {
+    .footerContainer {
+      flex-direction: column;
+      align-items: center;
+
+      .logo {
+        margin-right: 0;
+        min-width: 70%;
+        text-align: center;
+
+        .socials {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 2rem;
+        }
+      }
+
+      .award {
+        margin-right: 0;
+        padding-right: 0;
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .questions {
+        width: 80%;
+        padding: 1em;
+        margin-right: 0;
+        text-align: center;
+
+        h3 {
+          width: 100%;
+        }
+
+        .linksContainer {
+          justify-content: center;
+        }
+      }
+
+      .email {
+        width: 80%;
+        padding: 1em;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+
+        h3 {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
+
+
