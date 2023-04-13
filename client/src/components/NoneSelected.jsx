@@ -1,13 +1,14 @@
-import React from 'react'; 
+import React, { Component } from 'react';
 
-var NoneSelected = React.createClass({
-    render: function () {
-      return (
-        <div className="none-selected alert alert-warning" role="alert">
-          <span>No {this.props.text} selected.</span>
-        </div>
-      )
-    },
-  })
+class NoneSelected extends Component {
+  render() {
+    const { text } = this.props;
+    return (
+      <div className="none-selected alert alert-warning" role="alert">
+        <span>No {text} selected.</span>
+      </div>
+    );
+  }
+}
 
-  export default NoneSelected;
+export default NoneSelected;
