@@ -78,10 +78,32 @@
 
 .mobileNav {
   display: none;
-  position: fixed;
   top: 64px;
   left: 0;
   width: 100%;
   height: calc(100% - 64px);
   z-index: 3;
+  padding-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    .navContainer {
+      .logo {
+        display: none;
+      }
+
+      .linksContainer {
+        display: none;
+      }
+
+      .menuIcon {
+        display: block;
+      }
+    }
+  }
+
+  .mobileNav {
+    display: block;
+  }
 }
