@@ -72,6 +72,13 @@ const Navbar = () => {
                 <p className={classes.navName}>CONTACT</p>
               </button>
             </Link>
+            <Link
+              to="/MailApp"
+              className={classes.navLink}>
+              <button className={classes.navButton}>
+                <p className={classes.navName}>ADMIN LOGIN</p>
+              </button>
+            </Link>
             <div
               className={classes.menuIcon}
               onClick={toggleMobileNav}>
@@ -113,6 +120,11 @@ const Navbar = () => {
               to="/contact"
               className={classes.mobileNavLink}>
               <p className={classes.navName}>CONTACT</p>
+            </Link>
+            <Link
+              to="/MailApp"
+              className={classes.mobileNavLink}>
+              <p className={classes.navName}>ADMIN LOGIN</p>
             </Link>
           </div>
         </div>
