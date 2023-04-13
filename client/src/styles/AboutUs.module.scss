@@ -36,6 +36,7 @@
 @media (max-width: 767px) {
   .container {
     flex-direction: column;
+    text-align: center;
   }
 
   .logoContainer {
@@ -43,8 +44,14 @@
   }
 
   .textContainer {
-    padding-left: 0;
-    padding-top: 2rem;
+    padding-left: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 50%;
+    margin-left: 0;
   }
 }
 
