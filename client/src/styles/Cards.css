@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Noto+Sans:wght@300;500&display=swap');
+
+.card-container{
+    display: flex;
+    margin: 2em;
+    justify-content: space-between;
+    
+}
+
+.card{
+    padding: 1em;
+    background-color: #f8f3eb;
+    width: 30%;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 5px 5px 5px  #251b0f;
+}
+
+.card-text-title{
+    color: #251b0f;
+    font-family: 'Noto Sans', serif;
+}
+
+.card-text{
+    color: #251b0f;
+    font-family: 'News Cycle', arial;
+    font-size: 20px;
+}
+
+.card-link{
+    color: #251b0f;
+    font-weight: 600;
+    transition: 1s;
+    
+}
+
+.card-link:hover{
+    color: #95bddf;
+}

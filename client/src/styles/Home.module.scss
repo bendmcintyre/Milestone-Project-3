@@ -1,6 +1,54 @@
 @import './_common.scss';
 
-.myswiper{
-    width: 80%;
-    height: auto;
+.contrastContainer{
+    background-color: $contrast-background-color;
+    padding: 1em;
+    box-shadow: 5px 5px 5px  $footer-color;
+
+}
+
+.missionContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2em;
+    margin-top: 2em;
+}
+
+.dogImage{
+    border-radius: 20px;
+
+}
+
+.missionText{
+    color: $font-color-light;
+    margin: 40px;
+    font-size: 24px;
+    font-family: $body-font-family;
+}
+.missionTextTitle{
+    color: $font-color-light;
+    margin: 40px;
+    font-size: 40px;
+    font-family: $heading-font-family;
+}
+
+.quoteContainer{
+    margin: 2em;
+    padding: 1em;
+    display: block;
+}
+
+.quote{
+    text-align: center;
+    font-family: $heading-font-family;
+    font-style: italic;
+    font-size: 40px;
+    text-shadow: 2px 2px 2px  grey;
+}
+
+.author{
+    text-align: center;
+    font-family: $body-font-family;
+    font-style:italic;
+    font-size: 20px;
 }
