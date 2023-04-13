@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MailApp from './MailApp';
 
 const Admin = () => {
@@ -9,5 +9,5 @@ const Admin = () => {
      
     );
   };
-  React.render(<App mailboxes={fixtures} />, document.body)
+ 
   export default Admin;
