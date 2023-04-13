@@ -6,12 +6,12 @@ import EmailList from './EmailList';
 class Mailbox extends Component {
   constructor(props) {
     super(props);
-    this.state = { email_id: null };
+    this.state = { email_id: "admin" };
     this.handleSelectEmail = this.handleSelectEmail.bind(this);
   }
 
   handleSelectEmail(id) {
-    this.setState({ email_id: id });
+    this.setState({ email_id: "admin" });
   }
 
   render() {
