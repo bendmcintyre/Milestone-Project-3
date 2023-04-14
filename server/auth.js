@@ -26,4 +26,3 @@ const sessionMiddleware = session({
 const authMiddleware = auth(config);
 
 module.exports = { sessionMiddleware, authMiddleware, requiresAuth };
-
