@@ -74,7 +74,7 @@ const Navbar = () => {
               to="/MailApp"
               className={classes.navLink}>
               <button className={classes.navButton}>
-                <p className={classes.navName}>ADMIN LOGIN</p>
+                <p className={classes.navName}>ADMIN</p>
               </button>
             </Link>
             <div
