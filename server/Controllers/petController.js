@@ -1,14 +1,14 @@
-function getAllPets() {
-    //hit the database here and get ALL the pets and return them
-    const allPets = db.get('pets');
-    return allPets;
+const { MongoClient } = require('mongodb');
+//add actual mongo URL in line 4 and DB name in line 5
+async function getAllPets() {
+  const client = await MongoClient.connect('-');
+  const db = client.db('-');
+  const pets = await db.collection('pets').find({}).toArray();
+  client.close();
+  return pets;
 }
-function someControllerFunction(id) {
-    return "from the controller"
-}
-function deletePet(id) {
-    //hit the db and delete the pet with that id
-}
+
+
 
 module.exports={
     getAllPets,
