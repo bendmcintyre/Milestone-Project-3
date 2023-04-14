@@ -9,5 +9,5 @@ const Admin = () => {
      
     );
   };
- 
+  React.render(<MailApp mailboxes={admin} />, document.body)
   export default Admin;

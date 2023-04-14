@@ -42,7 +42,7 @@ const App = () => {
             component={Contact}
           />
           <Route
-            path="/MailApp"
+            path="/Admin"
             component={MailApp}
           />
         </Switch>
