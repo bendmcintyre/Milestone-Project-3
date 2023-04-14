@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 
 // auth.js
-const { auth } = require('express-openid-connect');
+const { auth, requiresAuth } = require('express-openid-connect');
 const session = require('express-session');
 
 const config = {
@@ -25,4 +25,5 @@ const sessionMiddleware = session({
 
 const authMiddleware = auth(config);
 
-module.exports = { sessionMiddleware, authMiddleware };
+module.exports = { sessionMiddleware, authMiddleware, requiresAuth };
+
