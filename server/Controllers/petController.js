@@ -2,16 +2,32 @@ const { ObjectId } = require('mongodb');
 const { getDb } = require('../db');
 
 async function getAllPets() {
-  const db = getDb();
-  const allPets = await db.collection('pets').find().toArray();
-  return allPets;
+    const db = getDb();
+    const allPets = await db.collection('pets').find().toArray();
+    if (!allPets) {
+      throw new Error('No pets found');
+    }
+    return allPets;
 }
-
+  
 async function getPet(id) {
-  const db = getDb();
-  const pet = await db.collection('pets').findOne({ _id: new ObjectId(id) });
-  return pet;
+    const db = getDb();
+    const pet = await db.collection('pets').findOne({ _id: new ObjectId(id) });
+    if (!pet) {
+      throw new Error('Pet not found');
+    }
+    return pet;
+  }
+  
+async function deletePet(id) {
+    const db = getDb();
+    const result = await db.collection('pets').deleteOne({ _id: new ObjectId(id) });
+    if (result.deletedCount === 0) {
+      throw new Error('Pet not found');
+    }
+    return true;
 }
+  
 
 async function createPet(newPet) {
   const db = getDb();
@@ -30,16 +46,6 @@ async function updatePet(id, updatedPet) {
     return pet;
   } else {
     return null;
-  }
-}
-
-async function deletePet(id) {
-  const db = getDb();
-  const result = await db.collection('pets').deleteOne({ _id: new ObjectId(id) });
-  if (result.deletedCount > 0) {
-    return true;
-  } else {
-    return false;
   }
 }
 
