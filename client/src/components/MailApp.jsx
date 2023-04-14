@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
+
 
 class Email extends Component {
     render() {
@@ -215,5 +215,5 @@ class Email extends Component {
       ],
     },
   ]
-  React.render(<MailApp mailboxes={admin} />, document.body)
+ 
   export default MailApp;
