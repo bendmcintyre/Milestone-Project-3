@@ -144,7 +144,7 @@ class Email extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        mailbox_id: null,
+        mailbox_id: admin,
       };
     }
   
