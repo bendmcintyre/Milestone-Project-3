@@ -34,6 +34,13 @@ router.post('/pet', async (req, res, next) => {
   }
 });
 
+router.post('/api/contact', (req, res) => {
+    // Handle form submission logic here
+    console.log(req.body);
+    res.sendStatus(200);
+});
+  
+
 router.put('/pet/:id', async (req, res, next) => {
   try {
     const updatedPet = await petController.updatePet(req.params.id, req.body);
@@ -59,5 +66,7 @@ router.delete('/pet/:id', async (req, res, next) => {
     next(err);
   }
 });
+
+
 
 module.exports = router;
