@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Mailbox from './Mailbox';
 import MailboxList from './MailboxList';
 import NoneSelected from './NoneSelected';
+import { render } from 'react-dom';
+
 
 class MailApp extends Component {
   constructor(props) {
@@ -77,6 +79,7 @@ var admin = [
     ],
   },
 ]
-React.render(<MailApp mailboxes={admin} />, document.body)
+render(<MailApp mailboxes={admin} />, document.getElementById('root'))
+
 
 export default MailApp;
