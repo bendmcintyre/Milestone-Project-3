@@ -1,48 +1,63 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const petController = require('./Controllers/petController');
-// should require auth file to make sure user is logged
-// prbably should add all api his from controller 
+const petController = require('./controllers/petController');
 
-
-router.post('/test', (req, res) => {
-    res.send('test worked post');
-})
-
-//Routes
-//errors 
-router.get('/pets', (req, res) =>{
-    //get all pets
-    const allPets = petController.getAllPets();
-    return res.send(allPets);
+// Routes
+router.get('/pets', async (req, res, next) => {
+  try {
+    const allPets = await petController.getAllPets();
+    res.json(allPets);
+  } catch (err) {
+    next(err);
+  }
 });
 
-router.get('/pet', (req, res) =>{
-    //to get a specific pet
-    //localhost:3000?id=123
-    const allPets = petController.getAllPets();
-    return res.send(allPets);
+router.get('/pet/:id', async (req, res, next) => {
+  try {
+    const pet = await petController.getPet(req.params.id);
+    if (pet) {
+      res.json(pet);
+    } else {
+      res.status(404).json({ message: 'Pet not found' });
+    }
+  } catch (err) {
+    next(err);
+  }
 });
 
-router.post('/pet', () => {
-    //add a new pet
-    //localhost:3000/?color=black&
-    const body = request.body;
-    db.add(body);
-    
-})
-
-router.delete('/pet', (req,res) => {
-    //localhost:3000/pet?id=123
-    const params = req.params;
-    const id  = params.id
-    petController.deletePet(id);
+router.post('/pet', async (req, res, next) => {
+  try {
+    const newPet = await petController.createPet(req.body);
+    res.json(newPet);
+  } catch (err) {
+    next(err);
+  }
 });
 
+router.put('/pet/:id', async (req, res, next) => {
+  try {
+    const updatedPet = await petController.updatePet(req.params.id, req.body);
+    if (updatedPet) {
+      res.json(updatedPet);
+    } else {
+      res.status(404).json({ message: 'Pet not found' });
+    }
+  } catch (err) {
+    next(err);
+  }
+});
 
-router.get('/test', (req, res) => {
-    const text = petController.someControllerFunction()
-    res.send(text);
-})
+router.delete('/pet/:id', async (req, res, next) => {
+  try {
+    const deletedPet = await petController.deletePet(req.params.id);
+    if (deletedPet) {
+      res.json({ message: 'Pet deleted' });
+    } else {
+      res.status(404).json({ message: 'Pet not found' });
+    }
+  } catch (err) {
+    next(err);
+  }
+});
 
 module.exports = router;
