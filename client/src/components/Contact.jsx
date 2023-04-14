@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classes from '../styles/Contact.module.scss';
- 
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -13,10 +13,21 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Your server-side implementation goes here
-    console.log("Form data:", formData);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+      console.log("Form submitted successfully");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
