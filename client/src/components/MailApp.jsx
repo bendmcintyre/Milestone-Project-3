@@ -82,7 +82,7 @@ class Email extends Component {
   class Mailbox extends Component {
     constructor(props) {
       super(props);
-      this.state = { email_id: "admin" };
+      this.state = { email_id: "null" };
       this.handleSelectEmail = this.handleSelectEmail.bind(this);
     }
   
@@ -145,7 +145,7 @@ class Email extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        mailbox_id: admin,
+        mailbox_id: "admin",
       };
     }
   
