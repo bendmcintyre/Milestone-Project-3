@@ -2,6 +2,12 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+//Auth0
+const { sessionMiddleware, authMiddleware } = require('./auth');
+
+app.use(sessionMiddleware);
+app.use(authMiddleware);
+
 //When controller is up and ready
 
 const routes = require('./routes')
@@ -16,3 +22,4 @@ app.use('/', routes);
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
+
