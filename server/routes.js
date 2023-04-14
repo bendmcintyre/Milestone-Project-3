@@ -34,6 +34,19 @@ router.post('/pet', async (req, res, next) => {
   }
 });
 
+router.post('/api/contact', async (req, res, next) => {
+    try {
+      const { name, email, subject, message } = req.body;
+      const contactForm = new ContactForm({ name, email, subject, message });
+      await contactForm.save();
+      console.log('Contact form saved:', contactForm);
+      res.sendStatus(200);
+    } catch (err) {
+      next(err);
+    }
+  });
+  
+
 router.put('/pet/:id', async (req, res, next) => {
   try {
     const updatedPet = await petController.updatePet(req.params.id, req.body);
@@ -59,5 +72,7 @@ router.delete('/pet/:id', async (req, res, next) => {
     next(err);
   }
 });
+
+
 
 module.exports = router;
