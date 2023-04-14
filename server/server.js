@@ -18,6 +18,12 @@ app.use(express.json());
 // Mounting the routes
 app.use('/', routes);
 
+app.post('/api/contact', (req, res) => {
+  // Handle form submission logic here
+  console.log(req.body);
+  res.sendStatus(200);
+});
+
 // Starting the server
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
