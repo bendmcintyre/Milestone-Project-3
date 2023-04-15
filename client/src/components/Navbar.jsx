@@ -77,6 +77,13 @@ const Navbar = () => {
                 <p className={classes.navName}>ADMIN</p>
               </button>
             </Link>
+            <Link
+              to="/Login"
+              className={classes.navLink}>
+              <button className={classes.navButton}>
+                <p className={classes.navName}>LOGIN</p>
+              </button>
+            </Link>
             <div
               className={`${classes.menuIcon} ${
                 showMobileNav ? classes.hideMenuIcon : ''
