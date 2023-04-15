@@ -15,6 +15,11 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const confirmation = window.confirm('Are you sure you want to submit the form?');
+    if (!confirmation) {
+      return;
+    }
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -94,7 +99,7 @@ const ContactForm = () => {
           onChange={handleChange}
         />
       </div>
-      <button type="submit">Send</button>
+      <button type="submit" >Send</button>
     </form>
     </div>
   );
