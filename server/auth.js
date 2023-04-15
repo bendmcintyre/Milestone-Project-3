@@ -1,20 +1,19 @@
-const bcrypt = require('bcrypt');
+require('dotenv').config();
 
-// auth.js
 const { auth, requiresAuth } = require('express-openid-connect');
 const session = require('express-session');
 
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret: 'a long, randomly-generated string stored in env',
+  secret: process.env.AUTH0_SECRET,
   baseURL: 'http://localhost:3000',
   clientID: '5u3xdKEZtfIeedPhSf5S0YXPFm36ym9H',
   issuerBaseURL: 'https://dev-1klmdplz2dv77xqw.us.auth0.com',
 };
 
 const sessionMiddleware = session({
-  secret: 'your-session-secret',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   cookie: {
@@ -26,3 +25,4 @@ const sessionMiddleware = session({
 const authMiddleware = auth(config);
 
 module.exports = { sessionMiddleware, authMiddleware, requiresAuth };
+
