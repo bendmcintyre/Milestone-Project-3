@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+
 // Auth0
 const { sessionMiddleware, authMiddleware, requiresAuth } = require('./auth');
 

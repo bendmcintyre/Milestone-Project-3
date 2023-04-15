@@ -1,9 +1,8 @@
 const { ObjectId } = require('mongodb');
-const { getDb } = require('../db');
+const db = require('../Models');
 
 async function getAllPets() {
-    const db = getDb();
-    const allPets = await db.collection('pets').find().toArray();
+    const allPets = await db.pet.find();
     if (!allPets) {
       throw new Error('No pets found');
     }
@@ -11,8 +10,8 @@ async function getAllPets() {
 }
   
 async function getPet(id) {
-    const db = getDb();
-    const pet = await db.collection('pets').findOne({ _id: new ObjectId(id) });
+
+    const pet = await db.pet.findOne({ _id: new ObjectId(id) });
     if (!pet) {
       throw new Error('Pet not found');
     }
@@ -20,8 +19,8 @@ async function getPet(id) {
   }
   
 async function deletePet(id) {
-    const db = getDb();
-    const result = await db.collection('pets').deleteOne({ _id: new ObjectId(id) });
+
+    const result = await db.pet.deleteOne({ _id: new ObjectId(id) });
     if (result.deletedCount === 0) {
       throw new Error('Pet not found');
     }
@@ -29,14 +28,14 @@ async function deletePet(id) {
 }
   
 async function createPet(newPet) {
-  const db = getDb();
-  const result = await db.collection('pets').insertOne(newPet);
+
+  const result = await db.pet.insertOne(newPet);
   return result.ops[0];
 }
 
 async function updatePet(id, updatedPet) {
-  const db = getDb();
-  const result = await db.collection('pets').updateOne(
+
+  const result = await db.pet.updateOne(
     { _id: new ObjectId(id) },
     { $set: updatedPet }
   );
