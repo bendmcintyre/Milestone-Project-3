@@ -50,7 +50,7 @@ router.post('/api/contact', async (req, res, next) => {
 // router.post('/api/foster', async (req, res, next) => {
 //     try {
 //       // const { update with form data } = req.body;
-//       const fosterForm = new FosterForm({ name, email, subject, message });
+//       const fosterForm = new FosterForm({ update with form data });
 //       await fosterForm.save();
 //       console.log('Foster form saved:', fosterForm);
 //       res.sendStatus(200);
@@ -63,7 +63,7 @@ router.post('/api/contact', async (req, res, next) => {
 // router.post('/api/adopt', async (req, res, next) => {
 //     try {
 //       // const { update with form data } = req.body;
-//       const adoptForm = new Adoptform ({ name, email, subject, message });
+//       const adoptForm = new Adoptform ({ update with form data });
 //       await adoptForm.save();
 //       console.log('Adopt form saved:', adoptForm);
 //       res.sendStatus(200);
