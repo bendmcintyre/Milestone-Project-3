@@ -1,7 +1,17 @@
 const MongoClient = require('mongodb').MongoClient;
-//include actual username and pasword 
-const uri = 'mongodb+srv://<username>:<password>@<your-cluster-url>/test?retryWrites=true&w=majority';
+//should add this part to env - and replace it with something like -->
+
+/*const mongoose = require('mongoose')
+console.log(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true, 
+  useUnifiedTopology: true
+})
+*/
+const uri = 'mongodb+srv://samadafzal:<samadafzal1>@cluster0.vawp0yd.mongodb.net/test';
 const client = new MongoClient(uri, { useNewUrlParser: true });
+
+
 
 let _db;
 
