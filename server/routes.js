@@ -6,6 +6,7 @@ const petController = require('./controllers/petController');
 router.get('/pets', async (req, res, next) => {
   try {
     const allPets = await petController.getAllPets();
+    //const allPets = [{name:"flim"},{name:"billy"}]
     res.json(allPets);
   } catch (err) {
     next(err);
