@@ -1,7 +1,8 @@
 const MongoClient = require('mongodb').MongoClient;
 //should add this part to env - and replace it with something like -->
 
-/*const mongoose = require('mongoose')
+/*
+const mongoose = require('mongoose')
 console.log(process.env.MONGO_URI)
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true, 
@@ -10,8 +11,6 @@ mongoose.connect(process.env.MONGO_URI, {
 */
 const uri = 'mongodb+srv://samadafzal:<samadafzal1>@cluster0.vawp0yd.mongodb.net/test';
 const client = new MongoClient(uri, { useNewUrlParser: true });
-
-
 
 let _db;
 

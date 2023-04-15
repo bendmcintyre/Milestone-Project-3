@@ -7,14 +7,15 @@ const PORT = process.env.PORT || 3000;
 // Auth0
 const { sessionMiddleware, authMiddleware, requiresAuth } = require('./auth');
 
-app.use(sessionMiddleware);
-app.use(authMiddleware);
+
 
 // When controller is up and ready
 const routes = require('./routes');
 
 // Middleware for parsing JSON data
 app.use(express.json());
+app.use(sessionMiddleware);
+app.use(authMiddleware);
 
 // Mounting the routes
 app.use('/', routes);
