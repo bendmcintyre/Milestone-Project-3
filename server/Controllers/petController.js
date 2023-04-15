@@ -28,7 +28,6 @@ async function deletePet(id) {
     return true;
 }
   
-
 async function createPet(newPet) {
   const db = getDb();
   const result = await db.collection('pets').insertOne(newPet);
