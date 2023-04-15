@@ -33,7 +33,7 @@ router.post('/pet', async (req, res, next) => {
     next(err);
   }
 });
-
+// Contact Form Route
 router.post('/api/contact', async (req, res, next) => {
     try {
       const { name, email, subject, message } = req.body;
@@ -45,6 +45,32 @@ router.post('/api/contact', async (req, res, next) => {
       next(err);
     }
   });
+
+// Foster Form Route
+// router.post('/api/foster', async (req, res, next) => {
+//     try {
+//       // const { update with form data } = req.body;
+//       const fosterForm = new FosterForm({ name, email, subject, message });
+//       await fosterForm.save();
+//       console.log('Foster form saved:', fosterForm);
+//       res.sendStatus(200);
+//     } catch (err) {
+//       next(err);
+//     }
+//   });
+
+// Adopt Form Route
+// router.post('/api/adopt', async (req, res, next) => {
+//     try {
+//       // const { update with form data } = req.body;
+//       const adoptForm = new Adoptform ({ name, email, subject, message });
+//       await adoptForm.save();
+//       console.log('Adopt form saved:', adoptForm);
+//       res.sendStatus(200);
+//     } catch (err) {
+//       next(err);
+//     }
+//   });
   
 
 router.put('/pet/:id', async (req, res, next) => {
