@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 
 
+
 // Auth0
 const { sessionMiddleware, authMiddleware, requiresAuth } = require('./auth');
 
