@@ -1,0 +1,30 @@
+@import './_common.scss';
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  padding-bottom: 3rem;
+
+  .login-button {
+    align-self: center;
+  padding: 0.5rem 1rem;
+  font-family: 'Noto Sans', sans-serif;
+  color: $font-color-dark;
+  background-color: $primary-accent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 30px;
+
+  &:hover {
+    background-color: $secondary-accent;
+  }
+
+    @media (max-width: 768px) {
+      padding: 12px 20px;
+      font-size: 3rem;
+    }
+  }
+}
