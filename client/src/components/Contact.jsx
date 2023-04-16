@@ -14,26 +14,29 @@ const ContactForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const confirmation = window.confirm('Are you sure you want to submit the form?');
-    if (!confirmation) {
-      return;
-    }
+  e.preventDefault();
+  const confirmation = window.confirm('Are you sure you want to submit the form?');
+  if (!confirmation) {
+    return;
+  }
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      if (!response.ok) {
-        throw new Error("Failed to submit form");
-      }
-      console.log("Form submitted successfully");
-    } catch (error) {
-      console.error(error);
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+    if (!response.ok) {
+      const errorResponse = await response.json();
+      console.error('Error:', errorResponse);
+      throw new Error("Failed to submit form");
     }
-  };
+    console.log("Form submitted successfully");
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 
   return (
     <div className={classes.container}>

@@ -4,13 +4,10 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const mongoose = require('mongoose');
-
-
+const contactRoutes = require('./Routes/contactRoutes');
 
 // Auth0
 const { sessionMiddleware, authMiddleware, requiresAuth } = require('./auth');
-
-
 
 // When controller is up and ready
 const routes = require('./routes');
@@ -21,8 +18,9 @@ app.use(sessionMiddleware);
 app.use(authMiddleware);
 
 // Mounting the routes
+app.use('/api', contactRoutes);
 app.use('/', routes);
- 
+
 // Protected route for user's profile
 app.get('/profile', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user));
